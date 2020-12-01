@@ -1,0 +1,451 @@
+SRS Document
+
+		Online Handcreaft Market
+
+Team: 	Nidhi Zope
+	Prachi Barkale
+
+Introduction
+
+A)Purpose:
+	This document is meant to delineate the features of Online Handcraft shopping, so as to serve as a guide to the developers on one hand and a software validation document for the prospective client on the other.
+	The Online Handcraft Market(OHM) for handcrafted item shop web application is intended to provide complete solutions for 		vendors as well as customers  through a single get way using internet. It helps Ordinary Customers to  buy state specific  handcraft product from the Seller. Users can request products, so they can purchase crafts on their demand .
+
+B)Scope:
+	This system allows the customer's to maintain their product's cart for add or remove the product over the internet.
+	Sellers will be able to manage their products stock.
+
+C)Definitions:
+	   OHM --> Online Handcraft Market
+	   SRS --> Software Requirement Specification
+	   GUI---> 	Graphical User Interface
+	   Portal--> Personalized Website
+	   Stackholder--> The person who will participate in the System. And Onwer of system
+	Ex.  Customer, Adminstrator , Sellers
+	   UML--->	Software Engineering Notation for visualising System in the form diagrams
+ 	   SSL--->	Secure Socket Layer used for providing restricted access to application.
+	   BOD---> Board Of Directors (Management).
+           	   RDBMS -->    Relational Dadabase Management System.
+	   CLUSTERS---> Group of independent servers.	
+
+D)Overview:
+	This System provides an easy solution to  customer's to buy the Handcrafted product without going to the shop and also provide 	platform to the seller to sale their products online.
+        
+
+E)Additional Information:
+	The system work on internet server, so it will  be operated by any end user for the buying purpose with secure platform. This system protects the integrity of the sellers and buyers, provides easy return's, buying policies and offers.
+        
+	
+F)General Description:
+	The Online Handcraft Market application helps to manage the products in the shoppers' carts and also helps customers to purchase. The online handcraft system will use the internet as the sole method for selling goods to its consumers.
+	
+	
+G)Functional Requirement:
+	This section provides requirement overview of the system. Various functional modules that can be implemented by 
+	the system will be-
+	
+	Description:
+1.Registration: If customer wants to buy the product then he/she must be registered, Unregistered user cannot get to shopping cart.
+   	
+2.Login : 
+Customer-
+Customer can login to the system by entering valid user id and password for shopping. Customer can Browse Prodcts statewise, their categories as well, he/ she can add products to her/his wishlist. 
+Supplier- 
+The supplier can log in to the application and can add the product or goods according to the categories.
+Admin-
+Admin can manage the supplier and the can view sold product history.
+
+3.Product:
+The product is the key part of the application. Supplier can ADD/EDIT/DELETE the product. 
+Customers can search for the product statewise, itemwise, craftwise. Customers can explore the products according to the requirement. 
+
+4.Cart: This is something like shopping bag or shopping trolly where the customer can add the product into cart as per the interest and pay for them in a single transaction.
+Customer can add or remove products in the shopping cart also customer can view the added product from the cart and the customer can check the discounts and price according to each product and sum of the price of all the products that are added in the bag.
+
+5.Payment:-
+Users can buy the product online also can process the payment online.  We are using a dummy payment page. It’s not a real-time payment gateway.
+
+6.Report Generation: After all transation the system can generate the portable file. Then sent one copy to customer's Email- address and another one for the system database to calculate the monthly transaction.
+     
+7.AboutUs and ContactUS:-
+Contact us and the AboutUs are the static pages where customer can contact admin and also users can check the about the organization. 
+
+H)Technical Issues:
+	This system will work on client-Server architecture. It will require an internet server.
+	The system should support some commonly used browser such as Chrome etc.
+	Interface Requirement Various interfaces for the product could be 
+	1.Login Page, 
+	2.Registration form
+	There will be a screen displaying information about product,
+
+	The customers may select the different options which will be open in another screen as
+		1.Login Page
+		2.Registration Form
+		3.Product Page
+		4.Handraft Cart 
+                	5.View order 
+                	6.Purchase history
+               		7.Account  Settings
+                	8.Payment Gateways
+	
+ I)Hardware Interface:
+	The System must run over the internet, all the hardware shall require to connect to internet will be hardware interface for the system. e.g. modem,  WAN, LAN. Specialized Server Infrastructure Hardware
+The system should use distrubuted servers i.e cloud for managing large amount of data so as to make it appear as single unit for end-user. The system should have proper clusters for backup.
+Hardware requirements for insurance on internet will be same for both parties which are as follows:
+	-Processor: Dual Core
+	-RAM: 2 GB
+	-Hard Disk: 320 GB
+		
+J)Software Interface:
+	The system is on server so it requires the any scripting language like JSP or  PHP or ASP, ETC.
+        The system should be able to exchange data using XML, JSON or any advance technology.
+	The system require DataBase also for the store the any transaction of the system like MySQL server etc.
+	System also require DNS (Domain Name space) for the naming on the internet like,
+	http://www.amazon.in
+        At the user need web browser for interact with the system.
+
+K)Tool and Technologies:-
+	The Online sports shop is a web application in Java. It’s using JSP, HTML, JavaScript, Bootstrap, CSS, Servlet, JDBC, MYSQL, Eclipse or STS tool, or Netbeans, and the tomcat server.
+	-It’s using HTML , CSS , BOOTSTRAP and ANGULAR to manage the front end.
+	-Servlet to manage the server-side request and response.
+	-ORACLE with the workbench to manage the backend/Database.
+	-Tomcat Server to deploy the application.
+	-STS or Eclipse or JAVABEANS as an IDE to write and run the source code.
+
+L)Performance Requirement:
+	There is no  performance requirement in this system, because the server request  and respone to client is totally based on internet connection of enduser.
+
+M)Design Constrains:
+	This system should be developed using  Standard Web Page Development Tool , which conforms GUI standards such like HTML, XML, 	JSON,etc.
+        The system should support various RDBMS and Cloud Technologies.
+
+
+N)Non-Functional Requirements
+	Following Non-Functional Requirements will be there in the insurance to the internet:
+	-Secure access to consumer’s confidential data.
+	-24X7 availability.
+	-Better component design to get better performance at peak time.
+	-Flexible service based architecture will be highly desirable for future extension.Non-Functional Requirements define system properties and constraints.
+
+1.Security:
+	  SSL
+	The System use SSL (Secure Socket Layer) in all trancations that include any confidential customer information.The system must automcatically log out all customers after a period of inactivity. The system should not leave any cookies on the customer's computer containing users's password.
+	The system's back-end servers shall  only be accessible to authenticated administrators.
+	Sensitive data will be encrypted  before being sent onver insecure connections like internet.
+        The proper firewalls should be developed to avoid intrusions from the internal or external sources.
+
+
+2.Reliability:
+	The system provides storage of all databases on redundant computers with  automatic switchover. 
+	The main pillar of reliability of the system  is the backup of the database 
+	which is conitinously maintained and update to reflect  the most recenet changes.
+
+
+3: Availability:
+	The system should be available at all times.meaning the user can access it using web browser, 
+        only restricted by the down time of the server on which the system runs.
+        In case of a of a hardware failure or database corruption, a replacement page will be shown. 
+	uptime : It mean 24 * 7 availability
+	100%--------------
+	99.9%
+	99.999%
+	99.9999%
+
+
+4: Maintainability:
+	A commercial database is used for maintaining the databae and application server takes care of the site. 
+	The maintainability can be done efficiently.
+
+5.Portability:
+	The application is HTML and scripting language based (Javascript). So the end user part is fully portable and any system using 
+	any web browser should be able to use the features of the system,including any hardware platform that is available 
+	or will be available in the futuer. 
+	An end-user  is used this system on an OS;either it is Windows or Linux.
+	The System shall run on PC, Laptops and PDA.etc.
+	The  technology should be transferable to different environments easily.
+
+6.Accessibility:
+        Only registered users should be allowed to process the orders after authentications.
+        Only GUI access of the system should be permited to end users.
+	System will have different types of users and every user has access constraints.
+
+7.Policies:
+       The system should adhere to all the legal formalities of the particular countries.
+       The system should maintain security related to sensitive data.
+
+8.Efficiency:
+	The system should provide good throughput and response to multiple users without burdening the system by using appropriate number of servers.
+
+9.Safety:
+      Software should not harm ethical and environmental conditions of the end users machine.
+
+10.Modulariy:
+      The system should have user friendly interface. 
+      It should be easily updated,modified and reused. 
+
+
+O)Operational Scenario:
+	Customer Interaction:
+	The Customer want to buy item. The system shows all product categories to customer. If customer select item then those items 	are listed in shopping cart for buying. The payment will be made with credit card or debit card. If customer wants to cancel the order before shopping then he or she can cancel it. Customer can see the buying report on account details. Customer will recieve email about purchase done.
+
+	SupplierInteraction:
+        	The supplier will have a different login id using which he can access his account that contains a control  panel that allows him to contact the administrator, set up product to sell. He can set up the catalog for his shop and upload the handcrafted products, also add/remove products etc. 	
+	
+P)ER listing: 
+
+	Business Entity:
+
+	
+
+	Role:
+		role_id		(PK)
+		role_name--supplier/Admin/Customer
+		role_status--active/inactive
+
+	User:
+		user_id		(PK)
+		password
+		user_name
+		email
+		address
+		contact_no
+		city
+		state
+		gender
+		dateOfBirth
+		role_id		(FK)
+		user_status
+
+	Products
+		product_id	(PK)
+		user_id		(FK)
+		product_name
+		product_price
+		product_description
+		product_quantity
+		product_category
+		product_images
+		
+	Order
+		order_id	(PK)
+		user_id		(FK)
+		product_id	(FK)
+		product_name
+		payment_id
+		payment type
+		payment Date
+		Amount
+		
+	//payment
+		payment_ID	(PK)
+		
+		Order_id	(FK)
+
+	
+	///Supplier
+		supplier_id	(PK)
+		supplier_name
+		password
+		contact_no
+		email
+		address
+		stock
+		
+	///Customer
+		customer_id	(PK)
+		customer_name
+		password
+		contact_no
+		email
+		address
+
+	claim-
+		customer_id
+		LoginName
+		Password
+		customer_id----supplier_id
+		customer_id 
+
+
+		
+Application Architecture:
+
+	Application = 
+			Logic 	+  data
+
+	Logic =(UI Logic  + Business Logic + DataAccess Logic) 
+	Data  =( structured data , Non Structured data)
+
+
+Online Application:
+
+	    Web based Application
+		    deployed on web and accessed by users from anywhere
+
+		    ShoppingApplication------Web portal-- used remotely by endusers,  supplier, admin
+
+Logic:
+     UI Logic:
+
+		 Web Pages +  HTML controls + Web Components (Angular)
+		 Navigation : (UI Routing) HTML Links, Routing mechansim
+		 Data Binding : DOM  + JSP tags (JSTL) + {{}} ngModel,
+		 
+		 Event Binding : 				action handlers
+					
+				 
+			HTTP Request:	GET:----------------Doget
+					POST:---------------Dopost
+					PUT:
+					DELETE:
+
+              Client Side UI----------------HTML, CSS, javaScript, bootstrap
+					        UI (Client Side UI Framework)
+						Angular, React, Vue,..........
+
+	Web Logic: ( Server Side processing)
+
+		Server UI---------------- JSP, servelet,  ( classical java web technology)
+				 spring MVC  ( to take advantage of MVC design Pattern using ready made frmwrk)
+						 Model, View, Controller
+						 Router
+						 (SOA  layer)
+						Spring Boot api
+						CRUD REST API
+						ORM Technique:Hibernate  ( ORM)
+						  ,JPA
+				         	JDBC  ( database Connectivity)
+		State management
+				
+		 	Client Side state management
+				cookies, querystring, form collection, hidden variables
+				 local storage, session storage, Web sql, 
+
+			Server Side state management
+				session, Cache,
+				database
+	Business Logic:
+		Java console application will be used to test your business Logic
+
+		Core Java:
+
+		will contain
+		 1.business query processing
+		 2.business operation managment
+		 3.Business data manipulation
+		
+	   from Online shopping point of view
+
+		Modules:
+
+		1.ProductCatalog
+				: Product Inventory
+					create, insert, delete,
+				: Produdct Category 
+					 get all
+					 get by category
+					
+		2.ShoppingCart
+				: Adding to cart
+				: Removing from cart
+				: getting all products from cart,etc.
+
+		3.OrderProcessing
+				: Order history
+				: Order details
+				: Cancel order
+				: Order shipped status
+				: Order delivered status and online billing receipt and msg on email or phone number 
+
+		4.CRM
+				: Number of order till date
+				: Previous orders
+				: Interests
+				: Special discount offers for regular customers
+		
+		5.PaymentProcessing
+				: Payment details
+				: Payment type
+				: Confirm Payment
+				: Show payment successful
+
+
+Data :
+		 Structured Data
+			 RDBMS
+				fields
+				tables
+				contstraints
+
+			List of tables
+				 Customers
+					Fields:
+					   ID, FirstName, LastName, email, address, role,contact number
+					primary Key:Customer_ID
+
+				 Suppliers
+					Fields:
+					   ID, FirstName, LastName,ShopName, email, role,contact number
+					primary Key: supplier_id
+
+				Admin
+					Fields:
+					   ID, FirstName, LastName, Role, Access, email, contact number
+					primary Key:Employee_ID
+
+
+				 Products
+					Fields:
+					   product_id, Title, Description, Category_type, Unitprice, Quantity, supplier_id, 					product_image,rating,availability
+					primary Key: product_ID
+					Foriegn key: Category_type, supplier_id
+	
+				
+				 Orders
+					Fields:
+					   Order_ID, Customer_ID, product_id, supplier_id,Item Details, Total_Amount, status
+					primary Key:Order_ID
+					Foriegn key:Category_No, Product_ID
+
+			 	 Payments
+					Fields:
+					   Payment_ID, Payment_date, product_id,Order_ID, Pyament_type, Payment_status
+					primary Key:Payment_ID
+					Foriegn key:Order_ID
+
+				 claims
+					Fields:
+					   customer_id, Password, FirstName, LastName, email, contact number
+					primary Key:  customer_id
+
+
+	Create .sql file
+			  ddl.sql--->file will contain   DDL commands for Table creation
+			  dml.sql--->file will contain   insert commands for filling dummy data to tables which we have created
+			  bqyery.sql-->file will conatin   SQL queries mapped for business queries
+		
+
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+        
+
