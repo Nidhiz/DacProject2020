@@ -1,0 +1,67 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">Handcraft Market</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="/user-panel" class="nav-link"><span ></span> Dashboard</a></li>
+          <li><a routerLink="/gallery" class="nav-link">Gallery</a></li>
+      <li ><a routerLink="/order" class="nav-link">My Orders</a></li>
+      <li><a routerLink="/cart" class="nav-link">Cart
+        <i class="fas fa fa-shopping-cart fa-lg"></i>
+        <span class="cart-basket d-flex align-items-center justify-content-center">
+          {{cartCount}}
+        </span>
+      </a>
+      </li>
+      <li><a routerLink="/user-sale" class="nav-link">Offers</a></li>
+      <li><a routerLink="/login" class="nav-link">Logout</a></li>
+       </ul>
+    </div>
+</nav>
+
+<div class="container-fluid-img">
+  <img class="img-state" src="\assets\images\Shop_by_State.jpg" alt="">
+
+</div>
+
+
+<div class="row" style="margin-bottom: 40px; margin-top: 10px;">
+    <div class="col-md-12">
+      <h2>Product List</h2>
+    </div>
+  </div>
+  
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="">State</label>
+          <input name="productState" type="text" placeholder="Search" [(ngModel)]="productState">
+            <button (click)="onSearch()" style="margin-left: 10px;" type="submit"  class="btn btn-success">Search</button>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row" >
+          <div class="col-md-4" *ngFor="let product of products"  style="margin-bottom: 20px; margin-top: 20px;">
+            <div class="card">
+              <img class="card-img-top" style="height:200px; width: 300px;" src="{{product['imageUrl']}}" alt="">
+              <div class="card-body">
+                <h5 class="card-title"><strong>{{product['productName']}}</strong></h5>
+                <p class="card-text">{{product['description']}}</p>
+                <div class="price"><strong>Price: </strong>{{product['price']}}</div>
+                <div class="category"><strong>State: </strong> {{product['productState']}}</div>
+                <button style="margin-top: 10px;" (click)="addToCart(product)" class="btn btn-success btn-sm">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    
+  
+  
+  
+  

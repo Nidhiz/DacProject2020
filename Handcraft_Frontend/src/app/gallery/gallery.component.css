@@ -1,0 +1,21 @@
+.img-state{
+    height: 150px;
+    width: 100%;
+    
+}
+.card-img-top{
+    transition: 0.5s;
+}
+.card-img-top:hover {
+    transform: scale(1.2);
+  }
+  .cart-basket {
+  
+    position: absolute;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background-color:blue;
+    border-radius: 50%;
+  }

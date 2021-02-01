@@ -1,0 +1,85 @@
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="/home">Handcraft Market</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/supplier-panel" class="nav-link"><span ></span> Dashboard</a></li>
+        <li class="active"><a href="/product-add"><span class="glyphicon glyphicon-plus"></span> Add Product</a></li>
+          <li><a routerLink="/product-list" class="nav-link"><span class="glyphicon glyphicon-th-list"></span> Show products</a></li>
+    <li><a routerLink="/login" class="nav-link"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+      </ul>
+  </div>
+</nav>
+
+
+<div class="card">
+    <div class="card-header">
+      <h4>Add Product</h4>
+    </div>
+    <div class="card-body">
+      <form #addUserForm="ngForm" (ngSubmit)="addProduct()">
+  
+        <div class="row">
+          <div class="col-md-6">
+          <img width="100%" height="100%" src="\assets\images\Elephant.jpg" alt="">
+        </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="productName">Name
+              </label>
+              <input name="productName" [(ngModel)]="product.productName" type="text" class="form-control" required #trackName="ngModel">
+              <p class="text-danger" *ngIf="!trackName.valid && trackName.touched">The product name is required</p>
+            
+            
+            </div>
+        
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input name="price" [(ngModel)]="product.price" type="number" class="form-control" required #trackName="ngModel">
+              <p class="text-danger" *ngIf="!trackName.valid && trackName.touched">The product Price Must mentioned</p>
+
+            </div>
+
+            <div class="form-group">
+            <label for="state">State</label>
+            <input name="state" [(ngModel)]="product.productState" class="form-control" required #trackName="ngModel">
+            <p class="text-danger" *ngIf="!trackName.valid && trackName.touched">The product State is required</p>
+
+          </div>
+      
+          <div class="form-group">
+              <label for="category">Category</label>
+              <input name="category" [(ngModel)]="product.category" class="form-control" required #trackName="ngModel">
+              <p class="text-danger" *ngIf="!trackName.valid && trackName.touched">Category of product required</p>
+
+            </div>
+        
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea  name="description" [(ngModel)]="product.description" rows="4" class="form-control"></textarea>
+                  </div>
+              
+                
+                    <div class="form-group">
+                      <label for="imageUrl">ImageURL</label>
+                      <input type="text" name="imageUrl" [(ngModel)]="product.imageUrl"  class="form-control" #trackName="ngModel">
+                      <p class="text-danger" *ngIf="!trackName.valid && trackName.touched">Image of Product is required</p>
+
+                    </div>
+                  
+             
+  
+        <div class="form-group">
+          <button type="submit"  class="btn btn-success">Add</button>
+          <a style="margin-left: 10px;" routerLink="/product-list" class="btn btn-danger">Cancel</a>
+
+          
+        </div>
+      </div>
+     </div>
+    </form>
+    </div>
+    </div>

@@ -1,0 +1,41 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="/home">Handcraft Market</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/admin-panel" class="nav-link">Dashboard</a></li>
+           <li class="Active"><a routerLink="/admin-product-list" class="nav-link">Products</a></li>
+    <li ><a routerLink="/supplier-list" class="nav-link">Supplier</a></li>
+    <li ><a routerLink="/admin-reminder" class="nav-link">Reminder</a></li>
+    <li><a routerLink="/login" class="nav-link">Logout</a></li>
+
+      </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <img class="img-discount" src="\assets\images\discount.jpg" alt="">
+</div>
+
+
+<div style=" text-align: center;margin-bottom: 25px;">
+<h2 class="shadow">Promote Craft. Preserve a Heritage.fair trade. support the artisan.
+</h2>
+</div>
+
+<div class="row" style="margin-right: 20px; margin-left: 40px;">
+<div class="col-md-3" *ngFor="let product of products">
+    <div class="card" style="margin-bottom: 20px;" >
+    
+      <img style="height:200px; width: 300px;" class="card-img-top" src="{{product['imageUrl']}}" alt="{{product['imageUrl']}}">
+      
+      <div class="card-body">
+        <h4 class="card-title">{{product['productName']}}</h4>
+        <div class="price"><strong>Price: </strong>{{product['price']}}</div>
+        <div class="category"><strong>State: </strong>{{product['productState']}}</div>
+        <button (click)="onDiscount(product.productId)" style="margin-top: 10px;" class="btn btn-success btn-md">Apply discount</button>
+      </div>
+    </div>
+  </div>
+</div>

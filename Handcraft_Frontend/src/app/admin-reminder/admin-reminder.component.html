@@ -1,0 +1,57 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">Handcraft Market</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="/admin-panel" class="nav-link">Dashboard</a></li>
+             <li><a routerLink="/admin-product-list" class="nav-link">Products</a></li>
+      <li ><a routerLink="/supplier-list" class="nav-link">Supplier</a></li>
+      <li ><a routerLink="/admin-reminder" class="nav-link">Reminder</a></li>
+      <li><a routerLink="/login" class="nav-link">Logout</a></li>
+  
+        </ul>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid" id="con">
+    <div class="hero-text">
+      <h1 style="font-size:50px">Special Month Offer</h1>
+      <p>We help to make it worth with attractive offers</p>
+      <button   type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        REMIND ME
+      </button>  
+      </div> 
+    </div> 
+ 
+  
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Reminder for You</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center">
+        <i class='glyphicon glyphicon-bell' style='font-size:48px;color:crimson;'></i>
+      <h3>Announce Upcoming Sales/Offers</h3>
+      <h4>Setup 15% discount </h4>
+      <h4>Happy Month End Offer</h4>
+      
+      
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>

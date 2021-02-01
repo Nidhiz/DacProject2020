@@ -1,0 +1,78 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">Handcraft Market</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="/user-panel" class="nav-link"><span ></span> Dashboard</a></li>
+          <li><a routerLink="/gallery" class="nav-link">Gallery</a></li>
+      <li ><a routerLink="/order" class="nav-link">My Orders</a></li>
+      <li><a routerLink="/cart" class="nav-link">Cart
+      <i class="fas fa fa-shopping-cart fa-lg"></i>
+      <span class="cart-basket d-flex align-items-center justify-content-center">
+        {{cartCount}}
+      </span>
+    </a>
+    </li>
+      <li><a routerLink="/user-sale" class="nav-link">Offers</a></li>
+      <li><a routerLink="/login" class="nav-link">Logout</a></li>
+  
+        </ul>
+    </div>
+</nav>
+
+
+<div class="modal-header">
+    <h2>Cart Items</h2>
+   
+</div>
+
+<div class="modal-body">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total Amount</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+        <tr *ngFor="let cart of carts; let index = index">
+            <td>{{index + 1}}</td>
+            <td>
+              <img class="product-image" src="{{cart.product['imageUrl']}}" alt="">
+            </td>
+            <td>{{cart.product['productName']}}</td>
+            <td>{{cart.product['price']}}</td>
+            <th>
+              <button (click)="updateQuantity(-1, cart)" class="btn btn-warning btn-sm">-</button>
+              {{cart['quantity']}}
+              <button (click)="updateQuantity(1, cart)" class="btn btn-warning btn-sm">+</button>
+      
+            </th>
+            <td>{{cart['totalAmount']}}</td>
+            <td>
+              <button (click)="onDelete(cart)" class="glyphicon glyphicon-trash" style="color:red;font-size:20px"></button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th> <button (click)="onAddMore()" class="btn btn-success">Add More</button></th>
+            <th colspan="3"></th>
+            <th>Total Amount</th>
+            <th style="color: crimson;font-size: 20px;">&#8377; {{totalCartAmount}}</th>
+            <th>
+              <button (click)="onPlaceOrder(totalCartAmount)" class="btn btn-success">Place Order</button>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    

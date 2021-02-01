@@ -1,0 +1,11 @@
+.product-image {
+    height: 70px;
+    transition: 0.5s;
+  }
+  .product-image:hover {
+    transform: scale(2);
+  }
+  #card-div{
+    margin-right: auto;
+    margin-left: auto;
+  }

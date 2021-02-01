@@ -1,0 +1,29 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">Handcraft Market</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="/user-panel" class="nav-link"><span ></span> Dashboard</a></li>
+          <li><a routerLink="/gallery" class="nav-link">Gallery</a></li>
+      <li ><a routerLink="/order" class="nav-link">My Orders</a></li>
+      <li><a routerLink="/cart" class="nav-link">Cart
+        <i class="fas fa fa-shopping-cart fa-lg"></i>
+        <span class="cart-basket d-flex align-items-center justify-content-center">
+          {{cartCount}}
+        </span>
+      </a>
+      </li>
+      <li><a routerLink="/user-sale" class="nav-link">Offers</a></li>
+      <li><a routerLink="/login" class="nav-link">Logout</a></li>
+       </ul>
+    </div>
+</nav>
+
+<div class="Box">
+<h1>Order placed with Amount</h1>
+<h2 style="color: crimson;">&#8377;{{totalAmount}}</h2>
+<button (click)="onCheckOut()"  class="btn btn-success">Check Out</button>
+<br><br><p>Keep Shopping</p>
+
+</div>

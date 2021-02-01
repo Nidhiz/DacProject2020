@@ -1,0 +1,60 @@
+.item{
+    background-size: contain;
+
+}
+img{
+    width: 100%;
+}
+
+#popUpMain{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0, 0,0.6);
+    z-index: 1001;
+    align-content: center;
+}
+#popup{
+    width: 500px;
+    height: 250px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("/assets/images/popupMain.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 2px 2px 5px 3px white;
+    text-align: center;
+
+}
+
+#newsHeading{
+    transform: translate(0px);
+    color: white;
+    
+}
+#para{
+    width: 60%;
+    padding: 5px;
+    margin-left: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
+
+/*.ok{
+    background-color:orange;
+    border: none;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    color: white;
+}*/

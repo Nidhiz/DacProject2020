@@ -1,0 +1,105 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="/home">Handcraft Market</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/admin-panel" class="nav-link">Dashboard</a></li>
+           <li><a routerLink="/admin-product-list" class="nav-link">Products</a></li>
+    <li ><a routerLink="/supplier-list" class="nav-link">Supplier</a></li>
+    <li ><a routerLink="/admin-reminder" class="nav-link">Reminder</a></li>
+    <li><a routerLink="/login" class="nav-link">Logout</a></li>
+
+      </ul>
+  </div>
+</nav>
+
+
+<div class="card">
+    <div class="card-header">
+      <h4>Apply Discount</h4>
+    </div>
+    <div class="card-body">
+      <form #addUserForm="ngForm" (ngSubmit)="applyDiscount(product.productId,dis.value)">
+  
+        <div class="row">
+            <div class="col-md-6">
+              <img width="100%" height="100%" src="{{product['imageUrl']}}" alt="{{product['imageUrl']}}">
+            </div>
+
+          <div class="col-md-6">
+
+            <h1><b>{{product.productName}}</b></h1>
+            <hr>           
+            <br/>
+
+            <div>
+             <h4><label>Category : </label> {{product.category}}</h4>
+           </div>
+           <br/>
+           <div>
+            <h4><label>price : </label> <b>&#8377;{{product.price}} </b></h4>
+          </div>
+          <br/>
+          <div>
+            <h4><label>Description : </label> {{product.description}}</h4>
+          </div>
+          <br/>
+          <div>
+            <h4><label>Product State : </label> {{product.productState}}</h4>
+          </div>
+          <br/>
+
+            <div class="form-group">
+                <!-- <label for="productId">ID
+                </label> -->
+                <input name="productId" [(ngModel)]="product.productId" type="hidden" class="form-control" disabled>
+              </div>
+
+            <div class="form-group">
+              <!-- <label for="productName">Name</label>-->
+              <input name="productName" [(ngModel)]="product.productName" type="hidden" class="form-control"disabled>
+            </div>
+        
+            <div class="form-group">
+              <!-- <label for="Price">Price</label>-->
+             <input name="price" [(ngModel)]="product.price" type="hidden" class="form-control"disabled>
+            </div>
+         
+            <div class="form-group">
+            <!-- <label for="productState">State</label -->
+            <input name="productState"[(ngModel)]="product.productState" type="hidden" class="form-control"disabled>
+            </div>  
+
+            <div class="form-group">
+              <!-- <label for="category">Category</label> -->
+              <input name= "category"[(ngModel)]="product.category" type="hidden" class="form-control"disabled>
+            </div>
+        
+            <div class="form-group">
+                <!-- <label for="description">Description</label>-->
+                <input name="description" [(ngModel)]="product.description" type="hidden" class="form-control"disabled>
+                </div>
+              
+                
+            <div class="form-group">
+                <!-- <label for="imageURL">ImageURL</label> -->
+                <input name="imageUrl"  [(ngModel)]="product.imageUrl"  type="hidden" class="form-control" disabled>
+                </div>
+                  
+                <div class="form-group">
+                  
+                  <h4><label for="discount">Discount</label> </h4>
+                    <input #dis type="number" name="discount" id=discount class="form-control">
+                    </div>
+  
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">Apply Discount</button>
+        </div>
+
+    </div>
+</div>
+</form>
+ </div>
+</div>
+

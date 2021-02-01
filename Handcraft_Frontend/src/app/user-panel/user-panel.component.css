@@ -1,0 +1,9 @@
+.cart-basket {
+    position: absolute;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background-color:blue;
+    border-radius: 50%;
+  }

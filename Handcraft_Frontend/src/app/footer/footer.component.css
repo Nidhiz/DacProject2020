@@ -1,0 +1,33 @@
+#copy {
+    padding: 15px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ff9999  ;
+    text-align: center;
+ }
+ .find{
+    padding: 30px;
+    font-size: 18px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#ffe6ff;
+ }
+ h4{
+    font-size: 20px;
+ }
+ .container{
+     width: 100%;
+     position: relative;
+ }
+
+  #footer{
+      margin-top: 15px;
+      padding: 30px;
+      background-image: url("src\assets\images\footer.jpg");
+      background-size: cover;
+      text-align: center;
+      color: #ac3939;
+      font-size: 20px;
+  }

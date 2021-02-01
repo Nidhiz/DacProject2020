@@ -1,0 +1,63 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">Handcraft Market</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="/user-panel" class="nav-link"><span ></span> Dashboard</a></li>
+          <li><a routerLink="/gallery" class="nav-link">Gallery</a></li>
+      <li ><a routerLink="/order" class="nav-link">My Orders</a></li>
+      <li><a routerLink="/cart" class="nav-link">Cart
+        <i class="fas fa fa-shopping-cart fa-lg"></i>
+        <span class="cart-basket d-flex align-items-center justify-content-center">
+          {{cartCount}}
+        </span>
+      </a>
+      </li>
+      <li><a routerLink="/user-sale" class="nav-link">Offers</a></li>
+      <li><a routerLink="/login" class="nav-link">Logout</a></li>
+       </ul>
+    </div>
+</nav>
+
+<div class="container-fluid" id="con">
+    <div class="hero-text">
+      <h1 style="font-size:50px">Special Month End Sale</h1>
+      <p>We help to make it worth with attractive offers</p>
+      <button   type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
+        Show offers
+      </button>  
+      </div> 
+    </div> 
+ 
+  
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">SALE! SALE! SALE!</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center">
+        <i class='glyphicon glyphicon-volume-up' style='font-size:48px;color:crimson;'></i>
+      <h3>Keep your Eyes Open</h3>
+      <h3>Sale Begins at Midnight</h3>
+      <h4 style="color: coral;">Flat 15% off (Limited time)</h4>
+      <h4>Shop Now !</h4>
+      
+      
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info " data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>

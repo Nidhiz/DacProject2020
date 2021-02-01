@@ -1,0 +1,60 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="/home">Handcraft Market</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/supplier-panel" class="nav-link"><span ></span> Dashboard</a></li>
+        <li><a href="/product-add"><span class="glyphicon glyphicon-plus"></span> Add Product</a></li>
+          <li><a routerLink="/product-list" class="nav-link"><span class="glyphicon glyphicon-th-list"></span> Show products</a></li>
+    <li><a routerLink="/login" class="nav-link"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+      </ul>
+  </div>
+</nav>
+
+
+  <!-- <div class="modal" style='position: absolute; width'>
+    HELLO
+  </div> -->
+
+<div class="card" id="card-div">
+    <div class="card-header">
+      <h4>Product List</h4>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>State</th>
+            <th>Category</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; let index = index"  >
+            <td>{{index + 1}}</td>
+            <td>
+              <img class="product-image" src="{{product['imageUrl']}}" alt="{{product['imageUrl']}}">
+
+            </td>
+            <td>{{product['productName']}}</td>
+            <td style="width: 20%;">{{product['description']}}</td>
+            <td>{{product['price']}}</td>
+            <td>{{product['productState']}}</td>
+            <td>{{product['category']}}</td>
+            <td>
+  
+              <button (click)="onEdit(product.productId)" style="margin-left: 10px;" class="btn btn-warning">Update</button>
+              <button (click)="onDelete(product.productId)" style="margin-left: 10px;" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

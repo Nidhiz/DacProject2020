@@ -1,0 +1,67 @@
+.info-orange { background: linear-gradient(135deg, rgb(251, 192, 45) 0%,rgb(245, 127, 23) 100%); }
+.info-green { background: linear-gradient(135deg, #1bb31b 0%,#118511 100%) }
+.info-brown { background: linear-gradient(135deg, rgb(211, 47, 47) 0%,rgb(183, 28, 28) 100%) }
+.info-blue { background: linear-gradient(135deg, rgb(25, 118, 210) 0%,rgb(13, 71, 161) 100%) }
+
+.info {
+  position: relative;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,.1);
+}
+
+.info .header {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.info span {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.info img {
+  width: 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.container-img {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.container-img .content {
+  position: absolute;
+  margin-top: 20px;
+  top: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  font-size: 17px;
+}
+.container-bg{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/pottery.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#copy {
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e7f5bc ;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
